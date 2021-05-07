@@ -1,4 +1,4 @@
-import CadaPrato from "./plateteste";
+import CadaPrato from "./plateOptions";
 const plateOption=[
     {option:"frango",
     image:"img/frango_yin_yang.png",

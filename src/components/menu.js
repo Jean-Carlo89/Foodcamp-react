@@ -1,5 +1,6 @@
 import Pratos from './pratos'
-
+import Bebidas from './bebidas'
+import Doces from './doces'
 export default function Menu(props){
   
   //console.log(props)
@@ -12,6 +13,13 @@ export default function Menu(props){
   return(
     <div class="menu">
        <Pratos escolhido={props.escolhido} setEscolhido={props.setEscolhido}/>  
+       <Bebidas 
+       escolhidoBebida={props.escolhidoBebida} 
+       setEscolhidoBebida={props.setEscolhidoBebida}
+       />
+       <Doces escolhidoDoce={props.escolhidoDoce} 
+       setEscolhidoDoce={props.setEscolhidoDoce}
+       />
         
 
     </div>
