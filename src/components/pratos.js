@@ -22,7 +22,10 @@ const plateOption=[
     id:3}
 ] 
 
-export default function Pratos(){
+
+
+
+export default function Pratos(props){
 
     return (
         <div class="secao">
@@ -32,7 +35,7 @@ export default function Pratos(){
             <div class="opcoes pratos">
                 {plateOption.map((item) =>
 
-                    <CadaPrato dish={item.option} desc={item.description} price={item.price} image={item.image} key={item.id} title={item.title} />
+                    <CadaPrato dish={item.option} desc={item.description} price={item.price} image={item.image} key={item.id} title={item.title} plateOption={plateOption} isSelected={item.isSelected} escolhido={props.escolhido} setEscolhido={props.setEscolhido} />
                 )}
             </div>
         </div>
