@@ -1,13 +1,20 @@
-//import PlateSJX from "./plate-option";
-import Section from './section'
+import Pratos from './pratos'
 
 export default function Menu(){
-    return(
+  
+  //console.log(props)
+  //console.log(check)
+  //console.log(setCheck)
+
+
+
+
+  return(
+    <div class="menu">
+       <Pratos/>
+            
+    </div>
     
-    
-    <div class='menu'>
-       <Section/>
-      </div>
     )
 }
 

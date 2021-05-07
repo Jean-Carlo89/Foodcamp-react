@@ -6,11 +6,12 @@ import Menu from './components/menu'
 
 
 function App(){
-
+  //const [check,setCheck] = React.useState('escondido')
+  //const [quantity,setQuantity] = React.useState(1)
     return(
       <>
       <Header/>
-      <Menu/>
+      <Menu />
       <Footer/>
       </>
     )

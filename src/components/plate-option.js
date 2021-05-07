@@ -1,46 +1,72 @@
-export default function PlateJSX(){
+import React from 'react'
+import CadaPrato from './plateteste'
 
+export default function PlateJSX(props){
+    //const [check,setCheck] = React.useState['.escondido']
+    //console.log(props)
+    //const {check,setCheck,quantity,setQuantity} = props
+   
     const plateOption=[
 
                     {option:"frango",
                     image:"img/frango_yin_yang.png",
                     title:'Frango Yin Yang',
                     description:'frfrfrfrfrf',
-                    price:'14,90'},
+                    price:'14,90',
+                    id:1},
                 
                     {option:"carne",
                     image:"img/frango_yin_yang.png",
                     title:'Carne Yin Yang',
                     description:'descricao da carne',
-                    price:'18,90'},
+                    price:'18,90',
+                    id:2},
                 
                     {option:"peixe",
                     image:"img/frango_yin_yang.png",
                     title:'Peixe Yin Yang',
                     description:'descricao do peixe',
-                    price:'167,90'}
+                    price:'167,90',
+                    id:3}
                 ] 
 
-       
-     
-        const plateOptionJSX = plateOption.map((item) => {
-            return(
+            /*    function chooseItem(){
+                    
+                 setCheck('ban')
+                          
+                    
+                    
+                   
 
-            <div class={`opcao prato-${item.option}`} onclick="selecionarPrato('.prato-frango', 'Frango Yin Yang', 14.90)">
-                 <img src={item.image} />
-                <div class="titulo">{item.title}</div>
-                <div class="descricao">{item.description}</div>
-                <div class="preco">R$ {item.price}</div>
-                <div class="check">
-                <ion-icon name="checkmark-circle"></ion-icon>
-                </div>
-          </div>
+                }
+
+                function add(){
+                    setQuantity(quantity+1)
+                }
+
+                function subtract(){
+                    if(quantity>0){
+                    setQuantity(quantity-1)
+                    }
+                    if(quantity===0){
+                        setCheck('x')
+                        setQuantity(1)
+                    }
+
+                    
+                }
+        */
+        
+                
+            return(
+                plateOption.map((item) => {
+                    <CadaPrato option={item.option} image={item.image} title={item.title} description={item.description} price={item.price} id={item.id}/>
+                })
+
             )
             
-            
-        }) 
-
-
-        console.log(plateOptionJSX)
-    return plateOptionJSX 
+           
 }
+
+
+
